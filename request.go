@@ -13,7 +13,7 @@ type Header_list struct{
 	Header_json *map[string]string
 }
 
-func request(url string, rp *Request_paramater)(*http.Response,error){
+func Request(url string, rp *Request_paramater)(*http.Response,error){
 
 	req, err := http.NewRequest("GET", url, nil)
 	if err != nil {
@@ -41,7 +41,7 @@ func request(url string, rp *Request_paramater)(*http.Response,error){
 	return resp,err
 }
 
-func request_post(url string, rp *Request_paramater)(*http.Response,error){
+func Request_post(url string, rp *Request_paramater)(*http.Response,error){
 
 	req, err := http.NewRequest("POST", url, nil)
 	if err != nil {

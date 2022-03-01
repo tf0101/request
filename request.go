@@ -41,9 +41,9 @@ func Request(url string, rp *Request_paramater)(*http.Response,error){
 	return resp,err
 }
 
-func Request_post(url string, rp *Request_paramater)(*http.Response,error){
+func Request_select(url string, rp *Request_paramater, http_method string)(*http.Response,error){
 
-	req, err := http.NewRequest("POST", url, nil)
+	req, err := http.NewRequest(http_method, url, nil)
 	if err != nil {
 		return nil,err
 	}
